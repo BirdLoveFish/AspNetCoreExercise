@@ -13,9 +13,9 @@ namespace HttpClientExercise.Controller
 
         }
 
-        public IActionResult Get()
+        public IActionResult Index()
         {
-            return Ok();
+            return Ok("value inedx");
         }
 
     }
