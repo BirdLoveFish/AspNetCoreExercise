@@ -1,0 +1,10 @@
+{
+  "name": "zhang",
+  "person": {
+    "name": "zhao li",
+    "age": 18
+  },
+  "array": [
+    1,2,3,4
+  ]
+}
