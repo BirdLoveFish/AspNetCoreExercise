@@ -87,6 +87,14 @@ namespace HttpClientExercise
             //HttpClient 默认生存期 默认为2分钟
             services.AddHttpClient("lifetime")
                 .SetHandlerLifetime(TimeSpan.FromMinutes(5));
+
+            /* IHttpContextAccessor获取HttpContext实例 */
+            //必须调用
+            services.AddHttpContextAccessor();
+            //三者都可以
+            //services.AddTransient<HttpAccessor>();
+            //services.AddSingleton<HttpAccessor>();
+            services.AddScoped<HttpAccessor>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

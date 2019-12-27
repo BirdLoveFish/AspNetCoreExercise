@@ -1,0 +1,3 @@
+﻿# IHttpClientFactory用于生成HttpClient，以此来访问别的地址
+
+# HttpContextAccessor是用来在别的类(没有继承ControllerBase类)中获取HttpContext上下文的
