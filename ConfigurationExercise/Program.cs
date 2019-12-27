@@ -26,6 +26,7 @@ namespace ConfigurationExercise
                         "iniData.ini", optional: false, reloadOnChange: false);
                     config.AddXmlFile(
                         "xmlData.xml", optional: false, reloadOnChange: false);
+                    config.AddInMemoryCollection(MemoryData._dict);
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
