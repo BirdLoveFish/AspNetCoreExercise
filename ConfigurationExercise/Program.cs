@@ -21,7 +21,9 @@ namespace ConfigurationExercise
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
                     config.AddJsonFile(
-                        "json_array.json", optional: false, reloadOnChange: false);
+                        "jsonData.json", optional: false, reloadOnChange: false);
+                    config.AddIniFile(
+                        "iniData.ini", optional: false, reloadOnChange: false);
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
