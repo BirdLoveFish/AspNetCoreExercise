@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <xmlSection1>zhang</xmlSection1>
+  <xmlSection2>
+    <name>zhao</name>
+  </xmlSection2>
+  <xmlSection3>
+    <age>1</age>
+    <age>2</age>
+    <age>3</age>
+  </xmlSection3>
+</root>

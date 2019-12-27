@@ -24,6 +24,8 @@ namespace ConfigurationExercise
                         "jsonData.json", optional: false, reloadOnChange: false);
                     config.AddIniFile(
                         "iniData.ini", optional: false, reloadOnChange: false);
+                    config.AddXmlFile(
+                        "xmlData.xml", optional: false, reloadOnChange: false);
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
