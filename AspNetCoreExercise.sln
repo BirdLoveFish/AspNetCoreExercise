@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientExercise", "HttpClientExercise\HttpClientExercise.csproj", "{D4435D7A-896E-44A8-B20C-79ABAB29B860}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExercise", "ConfigurationExercise\ConfigurationExercise.csproj", "{42C42266-9907-4EB2-A149-3FC957158288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationExercise", "ConfigurationExercise\ConfigurationExercise.csproj", "{42C42266-9907-4EB2-A149-3FC957158288}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileExercise", "FileUploadExercise\FileExercise.csproj", "{C05C3382-FF83-43E5-B087-D486F47BFD84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{42C42266-9907-4EB2-A149-3FC957158288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42C42266-9907-4EB2-A149-3FC957158288}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42C42266-9907-4EB2-A149-3FC957158288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C05C3382-FF83-43E5-B087-D486F47BFD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05C3382-FF83-43E5-B087-D486F47BFD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05C3382-FF83-43E5-B087-D486F47BFD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05C3382-FF83-43E5-B087-D486F47BFD84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

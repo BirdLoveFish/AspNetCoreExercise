@@ -1,0 +1,82 @@
+﻿<h1>home index</h1>
+
+<!-- 通过form上传单个文件 -->
+<h3>Single File</h3>
+<form method="post" asp-action="singleFile"
+      enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <button type="submit">提交</button>
+</form>
+
+<!-- 通过form上传多个文件 -->
+<h3>Multiple File</h3>
+<form method="post" asp-action="multipleFiles"
+      enctype="multipart/form-data">
+    <input type="file" multiple name="files" />
+    <button type="submit">提交</button>
+</form>
+
+<!-- 通过form上传单个文件，同时自定义文件名 -->
+<h3>File In Model</h3>
+<form method="post" asp-action="fileInModel"
+      enctype="multipart/form-data">
+    <input type="text" name="vm.Name" />
+    <input type="file" name="vm.File" />
+    <button type="submit">提交</button>
+</form>
+
+<!-- 通过JS上传单个文件 -->
+<div>
+    <h3>Single File Upload (JS)</h3>
+    <input type="file" onchange="UploadFile(event)" />
+</div>
+
+<!-- 通过JS上传多个文件 -->
+<div>
+    <h3>Multiple Files Upload (JS)</h3>
+    <input type="file" multiple onchange="UploadFiles(event)" />
+</div>
+
+<!-- 通过JS上传单个文件 同时修改文件名-->
+<div>
+    <h3>Single File Upload (JS)</h3>
+    <input id="fileName" type="text" />
+    <input type="file" onchange="UploadFileName(event)" />
+</div>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    console.log("aaa");
+
+    //单个文件上传表单操作
+    function UploadFile(event) {
+        var file = event.target.files[0];
+        var form = new FormData();
+        form.append("file", file);
+        axios.post("/Upload/SingleFile", form);
+    }
+
+    //多个文件上传表单操作
+    function UploadFiles(event) {
+        var files = event.target.files;
+        var form = new FormData();
+        for (var file of files) {
+            form.append("files", file);
+        }
+        axios.post("/Upload/MultipleFiles", form);
+    }
+
+    //单个文件上传表单操作 同时修改名字
+    function UploadFileName(event) {
+        var fileName = document.getElementById("fileName").value;
+
+        var file = event.target.files[0];
+        var form = new FormData();
+        form.append("vm.Name", fileName);
+        form.append("vm.File", file);
+        axios.post("/Upload/FileInModel", form);
+    }
+
+
+</script>
