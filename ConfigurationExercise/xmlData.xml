@@ -3,10 +3,17 @@
   <xmlSection1>zhang</xmlSection1>
   <xmlSection2>
     <name>zhao</name>
+    <age>18</age>
   </xmlSection2>
   <xmlSection3>
-    <age>1</age>
-    <age>2</age>
-    <age>3</age>
+    <age>1,2,3</age>
   </xmlSection3>
+  <xmlSection4>
+    <age name="key0">1</age>
+    <age name="key1">2</age>
+    <age name="key2">3</age>
+  </xmlSection4>
+  <xmlSection5>
+    <name color="yellow"></name>
+  </xmlSection5>
 </root>

@@ -18,7 +18,18 @@ namespace ConfigurationExercise.Controller
 
         public IActionResult Index()
         {
-            return Ok();
+            //var result = _configuration.AsEnumerable();
+
+            //var result = _configuration["xmlSection3:age"];
+            //return Ok(result.Split(','));
+
+            //var result = _configuration["xmlSection4:age:key0"];
+
+            //var result = _configuration.GetSection("xmlSection4:age").GetChildren();
+
+            var result = _configuration["xmlSection5:name:color"];
+
+            return Ok(result);
         }
     }
 }
