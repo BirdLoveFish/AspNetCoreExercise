@@ -46,14 +46,23 @@ namespace FileExercise.Controllers
             var pathname = Path.Combine(_dir, filename);
             var result64 = System.IO.File.ReadAllBytes(pathname);
 
-            //可以返回Base64的图片
+            //可以返回Base64的字符串
             //var result = Convert.ToBase64String(result64);
             //return Ok(result);
 
+            //返回图片文件的bytes
+            //return File(result64, "image/png");
+
             //直接返回图片文件
-            return File(result64, "image/png");
+            return PhysicalFile(pathname, "image/png");
         }
 
+        /// <summary>
+        /// 可以改变图片的尺寸
+        /// </summary>
+        /// <param name="width"></param>
+        /// <param name="filename"></param>
+        /// <returns></returns>
         public IActionResult DisplayImage2(int width, string filename)
         {
             var pathname = Path.Combine(_dir, filename);

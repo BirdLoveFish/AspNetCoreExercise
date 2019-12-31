@@ -10,3 +10,15 @@
 可以返回以ContentType:text/plain格式的Base64编码的字符串，也可以返回ContentType:image/png格式的图片。
 
 图片的压缩处理使用库 System.Drawing.Common
+
+# 文件夹设置
+
+wwwroot文件夹一般用于存放js,css,img的图片,这里面的所有文件全都不受保护，都是公开的。
+
+想要保护文件，就必须将图片存在别的文件夹，然后通过API来获取。
+这个文件夹在开发时是以项目所在的位置为根目录的，但是在发布后是以publish为根目录的。
+
+# 策略
+
+文件的存放路径可以从appsetting.json中读取，可以在其中设置绝对路径。
+也可以设置相对路径，在代码中添加RootPath

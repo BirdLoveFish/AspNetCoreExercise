@@ -1,0 +1,22 @@
+2019-12-31 17:03:29.013 +08:00 [INF] Starting web host
+2019-12-31 17:03:30.463 +08:00 [INF] Starting Startup ConfigureServices
+2019-12-31 17:03:30.854 +08:00 [INF] Starting Startup Configure
+2019-12-31 17:03:31.210 +08:00 [INF] Now listening on: https://localhost:5001
+2019-12-31 17:03:31.238 +08:00 [INF] Now listening on: http://localhost:5000
+2019-12-31 17:03:31.239 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-12-31 17:03:31.239 +08:00 [INF] Hosting environment: Development
+2019-12-31 17:03:31.241 +08:00 [INF] Content root path: D:\data\zhangb\AspNetCoreExercise\LogExercise
+2019-12-31 17:03:34.585 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-12-31 17:03:34.612 +08:00 [INF] Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+2019-12-31 17:03:34.688 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise).
+2019-12-31 17:03:34.695 +08:00 [INF] LogInformation
+2019-12-31 17:03:34.695 +08:00 [WRN] LogWarning
+2019-12-31 17:03:34.696 +08:00 [FTL] LogCritical
+2019-12-31 17:03:34.697 +08:00 [ERR] LogError
+2019-12-31 17:03:34.698 +08:00 [DBG] LogDebug
+2019-12-31 17:03:34.703 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-12-31 17:03:34.721 +08:00 [INF] Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 22.88ms
+2019-12-31 17:03:34.726 +08:00 [INF] Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+2019-12-31 17:03:34.728 +08:00 [INF] Request finished in 147.0959ms 200 text/plain; charset=utf-8
+2019-12-31 17:03:34.776 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2019-12-31 17:03:34.779 +08:00 [INF] Request finished in 3.2586ms 404 
