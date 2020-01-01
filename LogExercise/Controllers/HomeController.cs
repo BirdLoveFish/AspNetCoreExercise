@@ -17,8 +17,9 @@ namespace LogExercise.Controllers
         }
         public IActionResult Index()
         {
-            _logger.LogInformation("LogInformation");
-            _logger.LogWarning("LogWarning");
+            var result = new { name = "zhang" };
+            _logger.LogInformation(5,$"LogInformation{result}");
+            _logger.LogWarning(6,"LogWarning");
             _logger.LogCritical("LogCritical");
             _logger.LogError("LogError");
             _logger.LogTrace("LogTrace");

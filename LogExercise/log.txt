@@ -1,22 +1,144 @@
-2019-12-31 17:03:29.013 +08:00 [INF] Starting web host
-2019-12-31 17:03:30.463 +08:00 [INF] Starting Startup ConfigureServices
-2019-12-31 17:03:30.854 +08:00 [INF] Starting Startup Configure
-2019-12-31 17:03:31.210 +08:00 [INF] Now listening on: https://localhost:5001
-2019-12-31 17:03:31.238 +08:00 [INF] Now listening on: http://localhost:5000
-2019-12-31 17:03:31.239 +08:00 [INF] Application started. Press Ctrl+C to shut down.
-2019-12-31 17:03:31.239 +08:00 [INF] Hosting environment: Development
-2019-12-31 17:03:31.241 +08:00 [INF] Content root path: D:\data\zhangb\AspNetCoreExercise\LogExercise
-2019-12-31 17:03:34.585 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/  
-2019-12-31 17:03:34.612 +08:00 [INF] Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
-2019-12-31 17:03:34.688 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise).
-2019-12-31 17:03:34.695 +08:00 [INF] LogInformation
-2019-12-31 17:03:34.695 +08:00 [WRN] LogWarning
-2019-12-31 17:03:34.696 +08:00 [FTL] LogCritical
-2019-12-31 17:03:34.697 +08:00 [ERR] LogError
-2019-12-31 17:03:34.698 +08:00 [DBG] LogDebug
-2019-12-31 17:03:34.703 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
-2019-12-31 17:03:34.721 +08:00 [INF] Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 22.88ms
-2019-12-31 17:03:34.726 +08:00 [INF] Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
-2019-12-31 17:03:34.728 +08:00 [INF] Request finished in 147.0959ms 200 text/plain; charset=utf-8
-2019-12-31 17:03:34.776 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
-2019-12-31 17:03:34.779 +08:00 [INF] Request finished in 3.2586ms 404 
+1|2020-01-01 15:40:52.989 +08:00 [INF] ||Starting web host
+1|2020-01-01 15:40:56.089 +08:00 [INF] ||Starting Startup ConfigureServices
+1|2020-01-01 15:40:56.423 +08:00 [INF] |LogExercise.Startup|Starting Startup Configure
+1|2020-01-01 15:40:57.287 +08:00 [INF] |Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+1|2020-01-01 15:40:57.291 +08:00 [INF] |Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+1|2020-01-01 15:40:57.292 +08:00 [INF] |Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+1|2020-01-01 15:40:57.292 +08:00 [INF] |Microsoft.Hosting.Lifetime|Hosting environment: Development
+1|2020-01-01 15:40:57.293 +08:00 [INF] |Microsoft.Hosting.Lifetime|Content root path: E:\Learn\AspNetCoreExercise\AspNetCoreExercise\LogExercise
+|2020-01-01 15:41:00.113 +08:00 [INF] |Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/  
+|2020-01-01 15:41:00.140 +08:00 [INF] |Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 15:41:00.207 +08:00 [INF] |Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise).
+|2020-01-01 15:41:00.212 +08:00 [INF] |LogExercise.Controllers.HomeController|LogInformation{ name = zhang }
+|2020-01-01 15:41:00.214 +08:00 [WRN] |LogExercise.Controllers.HomeController|LogWarning
+|2020-01-01 15:41:00.215 +08:00 [FTL] |LogExercise.Controllers.HomeController|LogCritical
+|2020-01-01 15:41:00.218 +08:00 [ERR] |LogExercise.Controllers.HomeController|LogError
+|2020-01-01 15:41:00.220 +08:00 [VRB] |LogExercise.Controllers.HomeController|LogTrace
+|2020-01-01 15:41:00.221 +08:00 [DBG] |LogExercise.Controllers.HomeController|LogDebug
+|2020-01-01 15:41:00.229 +08:00 [INF] |Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+|2020-01-01 15:41:00.242 +08:00 [INF] |Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 28.1429ms
+|2020-01-01 15:41:00.250 +08:00 [INF] |Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 15:41:00.255 +08:00 [INF] |Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 147.2878ms 200 text/plain; charset=utf-8
+|2020-01-01 15:41:00.330 +08:00 [INF] |Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+|2020-01-01 15:41:00.336 +08:00 [INF] |Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 5.9839ms 404 
+1|2020-01-01 15:42:24.139 +08:00 [INF] CusString||Starting web host
+1|2020-01-01 15:42:24.876 +08:00 [INF] CusString||Starting Startup ConfigureServices
+1|2020-01-01 15:42:25.140 +08:00 [INF] CusString|LogExercise.Startup|Starting Startup Configure
+1|2020-01-01 15:42:25.701 +08:00 [INF] CusString|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+1|2020-01-01 15:42:25.703 +08:00 [INF] CusString|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+1|2020-01-01 15:42:25.705 +08:00 [INF] CusString|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+1|2020-01-01 15:42:25.706 +08:00 [INF] CusString|Microsoft.Hosting.Lifetime|Hosting environment: Development
+1|2020-01-01 15:42:25.707 +08:00 [INF] CusString|Microsoft.Hosting.Lifetime|Content root path: E:\Learn\AspNetCoreExercise\AspNetCoreExercise\LogExercise
+|2020-01-01 15:42:28.528 +08:00 [INF] CusString|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/  
+|2020-01-01 15:42:28.558 +08:00 [INF] CusString|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 15:42:28.626 +08:00 [INF] CusString|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise).
+|2020-01-01 15:42:28.632 +08:00 [INF] CusString|LogExercise.Controllers.HomeController|LogInformation{ name = zhang }
+|2020-01-01 15:42:28.633 +08:00 [WRN] CusString|LogExercise.Controllers.HomeController|LogWarning
+|2020-01-01 15:42:28.635 +08:00 [FTL] CusString|LogExercise.Controllers.HomeController|LogCritical
+|2020-01-01 15:42:28.636 +08:00 [ERR] CusString|LogExercise.Controllers.HomeController|LogError
+|2020-01-01 15:42:28.637 +08:00 [VRB] CusString|LogExercise.Controllers.HomeController|LogTrace
+|2020-01-01 15:42:28.638 +08:00 [DBG] CusString|LogExercise.Controllers.HomeController|LogDebug
+|2020-01-01 15:42:28.643 +08:00 [INF] CusString|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+|2020-01-01 15:42:28.656 +08:00 [INF] CusString|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 20.7357ms
+|2020-01-01 15:42:28.659 +08:00 [INF] CusString|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 15:42:28.666 +08:00 [INF] CusString|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 137.4002ms 200 text/plain; charset=utf-8
+|2020-01-01 15:42:28.749 +08:00 [INF] CusString|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+|2020-01-01 15:42:28.761 +08:00 [INF] CusString|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 11.041ms 404 
+1|2020-01-01 15:46:49.427 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher||Starting web host
+1|2020-01-01 15:46:50.116 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher||Starting Startup ConfigureServices
+1|2020-01-01 15:46:50.323 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|LogExercise.Startup|Starting Startup Configure
+1|2020-01-01 15:46:50.874 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+1|2020-01-01 15:46:50.878 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+1|2020-01-01 15:46:50.879 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+1|2020-01-01 15:46:50.880 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.Hosting.Lifetime|Hosting environment: Development
+1|2020-01-01 15:46:50.881 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.Hosting.Lifetime|Content root path: E:\Learn\AspNetCoreExercise\AspNetCoreExercise\LogExercise
+|2020-01-01 15:46:53.378 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/  
+|2020-01-01 15:46:53.406 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 15:46:53.474 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise).
+|2020-01-01 15:46:53.480 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|LogExercise.Controllers.HomeController|LogInformation{ name = zhang }
+|2020-01-01 15:46:53.482 +08:00 [WRN] CusString|LogExercise.Extensions.RequestInfoEnricher|LogExercise.Controllers.HomeController|LogWarning
+|2020-01-01 15:46:53.482 +08:00 [FTL] CusString|LogExercise.Extensions.RequestInfoEnricher|LogExercise.Controllers.HomeController|LogCritical
+|2020-01-01 15:46:53.483 +08:00 [ERR] CusString|LogExercise.Extensions.RequestInfoEnricher|LogExercise.Controllers.HomeController|LogError
+|2020-01-01 15:46:53.484 +08:00 [VRB] CusString|LogExercise.Extensions.RequestInfoEnricher|LogExercise.Controllers.HomeController|LogTrace
+|2020-01-01 15:46:53.487 +08:00 [DBG] CusString|LogExercise.Extensions.RequestInfoEnricher|LogExercise.Controllers.HomeController|LogDebug
+|2020-01-01 15:46:53.493 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+|2020-01-01 15:46:53.505 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 20.7853ms
+|2020-01-01 15:46:53.510 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 15:46:53.513 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 139.466ms 200 text/plain; charset=utf-8
+|2020-01-01 15:46:53.597 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+|2020-01-01 15:46:53.619 +08:00 [INF] CusString|LogExercise.Extensions.RequestInfoEnricher|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 21.8562ms 404 
+1|2020-01-01 16:02:16.096 +08:00 [INF] CusString|Enrich||Starting web host
+1|2020-01-01 16:02:17.007 +08:00 [INF] CusString|Enrich||Starting Startup ConfigureServices
+1|2020-01-01 16:02:17.310 +08:00 [INF] CusString|Enrich|LogExercise.Startup|Starting Startup Configure
+1|2020-01-01 16:02:17.907 +08:00 [INF] CusString|Enrich|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+1|2020-01-01 16:02:17.917 +08:00 [INF] CusString|Enrich|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+1|2020-01-01 16:02:17.919 +08:00 [INF] CusString|Enrich|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+1|2020-01-01 16:02:17.920 +08:00 [INF] CusString|Enrich|Microsoft.Hosting.Lifetime|Hosting environment: Development
+1|2020-01-01 16:02:17.921 +08:00 [INF] CusString|Enrich|Microsoft.Hosting.Lifetime|Content root path: E:\Learn\AspNetCoreExercise\AspNetCoreExercise\LogExercise
+|2020-01-01 16:02:20.454 +08:00 [INF] CusString|GET|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/  
+|2020-01-01 16:02:20.480 +08:00 [INF] CusString|Enrich|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 16:02:20.543 +08:00 [INF] CusString|Enrich|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise).
+|2020-01-01 16:02:20.548 +08:00 [INF] CusString|Enrich|LogExercise.Controllers.HomeController|LogInformation{ name = zhang }
+|2020-01-01 16:02:20.550 +08:00 [WRN] CusString|Enrich|LogExercise.Controllers.HomeController|LogWarning
+|2020-01-01 16:02:20.551 +08:00 [FTL] CusString|Enrich|LogExercise.Controllers.HomeController|LogCritical
+|2020-01-01 16:02:20.558 +08:00 [ERR] CusString|Enrich|LogExercise.Controllers.HomeController|LogError
+|2020-01-01 16:02:20.559 +08:00 [VRB] CusString|Enrich|LogExercise.Controllers.HomeController|LogTrace
+|2020-01-01 16:02:20.560 +08:00 [DBG] CusString|Enrich|LogExercise.Controllers.HomeController|LogDebug
+|2020-01-01 16:02:20.565 +08:00 [INF] CusString|Enrich|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+|2020-01-01 16:02:20.574 +08:00 [INF] CusString|Enrich|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 23.2599ms
+|2020-01-01 16:02:20.579 +08:00 [INF] CusString|Enrich|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 16:02:20.583 +08:00 [INF] CusString|Enrich|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 132.0684ms 200 text/plain; charset=utf-8
+|2020-01-01 16:02:20.646 +08:00 [INF] CusString|GET|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+|2020-01-01 16:02:20.657 +08:00 [INF] CusString|Enrich|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 10.9229ms 404 
+1|2020-01-01 16:04:58.967 +08:00 [INF] CusString|{ name = Enrich, line = 19 }||Starting web host
+1|2020-01-01 16:04:59.752 +08:00 [INF] CusString|{ name = Enrich, line = 19 }||Starting Startup ConfigureServices
+1|2020-01-01 16:04:59.978 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|LogExercise.Startup|Starting Startup Configure
+1|2020-01-01 16:05:00.633 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+1|2020-01-01 16:05:00.637 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+1|2020-01-01 16:05:00.638 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+1|2020-01-01 16:05:00.639 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime|Hosting environment: Development
+1|2020-01-01 16:05:00.640 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime|Content root path: E:\Learn\AspNetCoreExercise\AspNetCoreExercise\LogExercise
+|2020-01-01 16:05:03.333 +08:00 [INF] CusString|GET|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/  
+|2020-01-01 16:05:03.356 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 16:05:03.417 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise).
+|2020-01-01 16:05:03.421 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|LogExercise.Controllers.HomeController|LogInformation{ name = zhang }
+|2020-01-01 16:05:03.422 +08:00 [WRN] CusString|{ name = Enrich, line = 19 }|LogExercise.Controllers.HomeController|LogWarning
+|2020-01-01 16:05:03.422 +08:00 [FTL] CusString|{ name = Enrich, line = 19 }|LogExercise.Controllers.HomeController|LogCritical
+|2020-01-01 16:05:03.423 +08:00 [ERR] CusString|{ name = Enrich, line = 19 }|LogExercise.Controllers.HomeController|LogError
+|2020-01-01 16:05:03.424 +08:00 [VRB] CusString|{ name = Enrich, line = 19 }|LogExercise.Controllers.HomeController|LogTrace
+|2020-01-01 16:05:03.425 +08:00 [DBG] CusString|{ name = Enrich, line = 19 }|LogExercise.Controllers.HomeController|LogDebug
+|2020-01-01 16:05:03.429 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+|2020-01-01 16:05:03.439 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 14.6317ms
+|2020-01-01 16:05:03.443 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+|2020-01-01 16:05:03.448 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 119.0292ms 200 text/plain; charset=utf-8
+|2020-01-01 16:05:03.543 +08:00 [INF] CusString|GET|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+|2020-01-01 16:05:03.547 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished in 4.0961ms 404 
+2020-01-01 16:16:55.419 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|||||Starting web host
+2020-01-01 16:16:56.101 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|||||Starting Startup ConfigureServices
+2020-01-01 16:16:56.296 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|LogExercise.Startup||||Starting Startup Configure
+2020-01-01 16:16:56.799 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Now listening on: https://localhost:5001
+2020-01-01 16:16:56.803 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Now listening on: http://localhost:5000
+2020-01-01 16:16:56.804 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Application started. Press Ctrl+C to shut down.
+2020-01-01 16:16:56.805 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Hosting environment: Development
+2020-01-01 16:16:56.806 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Content root path: E:\Learn\AspNetCoreExercise\AspNetCoreExercise\LogExercise
+2020-01-01 16:16:59.157 +08:00 [INF] CusString|GET|Microsoft.AspNetCore.Hosting.Diagnostics||||Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-01 16:16:59.182 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Routing.EndpointMiddleware||||Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+2020-01-01 16:16:59.240 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker||||Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise).
+2020-01-01 16:16:59.254 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker||||Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 5.0708ms
+2020-01-01 16:16:59.260 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Routing.EndpointMiddleware||||Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)'
+2020-01-01 16:16:59.265 +08:00 [ERR] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware||||An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'LogExercise.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-01-01 16:16:59.425 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Hosting.Diagnostics||||Request finished in 270.996ms 500 text/html; charset=utf-8
+2020-01-01 16:16:59.673 +08:00 [INF] CusString|GET|Microsoft.AspNetCore.Hosting.Diagnostics||||Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-01 16:16:59.690 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Hosting.Diagnostics||||Request finished in 17.0888ms 404 

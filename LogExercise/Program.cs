@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LogExercise.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
+using Serilog.Context;
 using Serilog.Events;
+using Serilog.Sinks.File;
 
 namespace LogExercise
 {
@@ -16,18 +19,17 @@ namespace LogExercise
         public static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-            .MinimumLevel.Debug()
+            .MinimumLevel.Verbose()
             .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
             .Enrich.FromLogContext()
+            .Enrich.WithRequestInfo()
             .WriteTo.Console()
             .WriteTo.File(
                 "log.txt",
-                rollingInterval: RollingInterval.Minute,    //∞¥’’∑÷÷”πˆ∂Ø
-                fileSizeLimitBytes: 1_000_000,
-                rollOnFileSizeLimit: true,
-                shared: true,
-                flushToDiskInterval: TimeSpan.FromSeconds(1))
+                outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {CusString}|{Method}|{SourceContext}|{MemberName}|{FilePath}|{LineNumber}|{Message:lj}{NewLine}{Exception}")
             .CreateLogger();
+
+            LogContext.PushProperty("A", 1);
 
             try
             {
