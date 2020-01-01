@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationExercise", "Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileExercise", "FileExercise\FileExercise.csproj", "{C05C3382-FF83-43E5-B087-D486F47BFD84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogExercise", "LogExercise\LogExercise.csproj", "{1C0920EF-C1D3-470C-A2BF-C4C7CE5D7D3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogExercise", "LogExercise\LogExercise.csproj", "{1C0920EF-C1D3-470C-A2BF-C4C7CE5D7D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacExercise", "AutofacExercise\AutofacExercise.csproj", "{4CA3572D-7B7B-4B75-84AE-BA3C5AE1A3D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1C0920EF-C1D3-470C-A2BF-C4C7CE5D7D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C0920EF-C1D3-470C-A2BF-C4C7CE5D7D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C0920EF-C1D3-470C-A2BF-C4C7CE5D7D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA3572D-7B7B-4B75-84AE-BA3C5AE1A3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA3572D-7B7B-4B75-84AE-BA3C5AE1A3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA3572D-7B7B-4B75-84AE-BA3C5AE1A3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA3572D-7B7B-4B75-84AE-BA3C5AE1A3D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
