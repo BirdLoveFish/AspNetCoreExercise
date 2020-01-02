@@ -33,16 +33,16 @@ namespace AutomapperExercise.Controllers
             Stopwatch stopwatch = new Stopwatch();
             var a = new A
             {
-                A1 = "A1",
-                A2 = "A2",
-                A3 = "A3",
-                A4 = "A4",
-                A5 = "A5",
-                A6 = "A6",
-                A7 = "A7",
+                A1 = Guid.NewGuid().ToString(),
+                A2 = Guid.NewGuid().ToString(),
+                A3 = Guid.NewGuid().ToString(),
+                A4 = Guid.NewGuid().ToString(),
+                A5 = Guid.NewGuid().ToString(),
+                A6 = Guid.NewGuid().ToString(),
+                A7 = Guid.NewGuid().ToString(),
             };
             var aList = new List<A>();
-            for(int i = 0; i < 100; i++)
+            for(int i = 0; i < 10000; i++)
             {
                 aList.Add(a);
             }
