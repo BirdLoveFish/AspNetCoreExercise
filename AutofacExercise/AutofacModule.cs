@@ -11,10 +11,12 @@ using System.Threading.Tasks;
 
 namespace AutofacExercise
 {
+    //一个模块，需要在startup中导入
     public class AutofacModule: Autofac.Module
     {
         protected override void Load(ContainerBuilder builder)
         {
+            //拦截器
             builder.RegisterType<TestInterceptor>();
 
             //调用其他程序集
@@ -25,6 +27,7 @@ namespace AutofacExercise
 
             builder.RegisterAssemblyTypes(typeof(Program).Assembly)
                 .AsImplementedInterfaces()
+                //允许接口使用拦截器
                 .EnableInterfaceInterceptors();
 
             var controllerBaseType = typeof(ControllerBase);
