@@ -23,21 +23,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomapperExercise", "Autom
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Automapper", "Automapper", "{720CC835-636A-4368-A82B-F6B36E2BD4B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapperProfile", "AutoMapperProfile\AutoMapperProfile.csproj", "{B6ED426A-6B3F-475D-85A9-365E523C9D4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapperProfile", "AutoMapperProfile\AutoMapperProfile.csproj", "{B6ED426A-6B3F-475D-85A9-365E523C9D4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidationExercise", "FluentValidationExercise\FluentValidationExercise.csproj", "{34D2B863-4D7C-49D3-AB9E-9A50F7D35BE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationExercise", "FluentValidationExercise\FluentValidationExercise.csproj", "{34D2B863-4D7C-49D3-AB9E-9A50F7D35BE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQExercise", "RabbitMQExercise", "{A02E5204-18EB-4896-8514-62A5112EDD2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitServer", "RabbitServer\RabbitServer.csproj", "{8EF48230-1CD1-4289-98F4-26297675B5DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitServer", "RabbitServer\RabbitServer.csproj", "{8EF48230-1CD1-4289-98F4-26297675B5DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitClient", "RabbitClient\RabbitClient.csproj", "{DDE4C38E-A0F1-4D67-8ED1-CBF3CB0F3A7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitClient", "RabbitClient\RabbitClient.csproj", "{DDE4C38E-A0F1-4D67-8ED1-CBF3CB0F3A7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitClient2", "RabbitClient2\RabbitClient2.csproj", "{6C5BF30B-A41A-4EB9-A607-AAE504C443D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitClient2", "RabbitClient2\RabbitClient2.csproj", "{6C5BF30B-A41A-4EB9-A607-AAE504C443D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRExercise", "SignalRExercise\SignalRExercise.csproj", "{61642332-5310-41AD-8A51-B3E8566FE278}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRExercise", "SignalRExercise\SignalRExercise.csproj", "{61642332-5310-41AD-8A51-B3E8566FE278}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{19461C0C-7507-4096-8D5A-4A5D09B5A9D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{2E4CCAE2-FB75-4406-8AD6-62E7D3A1F807}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,10 @@ Global
 		{61642332-5310-41AD-8A51-B3E8566FE278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61642332-5310-41AD-8A51-B3E8566FE278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61642332-5310-41AD-8A51-B3E8566FE278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E4CCAE2-FB75-4406-8AD6-62E7D3A1F807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E4CCAE2-FB75-4406-8AD6-62E7D3A1F807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E4CCAE2-FB75-4406-8AD6-62E7D3A1F807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E4CCAE2-FB75-4406-8AD6-62E7D3A1F807}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
