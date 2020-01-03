@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitClient", "RabbitClien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitClient2", "RabbitClient2\RabbitClient2.csproj", "{6C5BF30B-A41A-4EB9-A607-AAE504C443D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRExercise", "SignalRExercise\SignalRExercise.csproj", "{61642332-5310-41AD-8A51-B3E8566FE278}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{19461C0C-7507-4096-8D5A-4A5D09B5A9D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,10 @@ Global
 		{6C5BF30B-A41A-4EB9-A607-AAE504C443D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C5BF30B-A41A-4EB9-A607-AAE504C443D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C5BF30B-A41A-4EB9-A607-AAE504C443D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61642332-5310-41AD-8A51-B3E8566FE278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61642332-5310-41AD-8A51-B3E8566FE278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61642332-5310-41AD-8A51-B3E8566FE278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61642332-5310-41AD-8A51-B3E8566FE278}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +114,7 @@ Global
 		{8EF48230-1CD1-4289-98F4-26297675B5DE} = {A02E5204-18EB-4896-8514-62A5112EDD2F}
 		{DDE4C38E-A0F1-4D67-8ED1-CBF3CB0F3A7A} = {A02E5204-18EB-4896-8514-62A5112EDD2F}
 		{6C5BF30B-A41A-4EB9-A607-AAE504C443D9} = {A02E5204-18EB-4896-8514-62A5112EDD2F}
+		{61642332-5310-41AD-8A51-B3E8566FE278} = {19461C0C-7507-4096-8D5A-4A5D09B5A9D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44866BCA-F358-4BD9-BD4D-5C51A2153967}
