@@ -8,6 +8,7 @@ namespace RabbitClient2
 {
     class Program
     {
+        #region work模式
         static void Main(string[] args)
         {
             //创建连接工厂
@@ -41,5 +42,7 @@ namespace RabbitClient2
             channel.Dispose();
             connection.Close();
         }
+        #endregion
+
     }
 }
