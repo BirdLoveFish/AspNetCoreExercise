@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         //画布距离上边的长度
         private int top = 200;
         //放大倍率
-        private float big = 1.1f;
+        private float big = 2.0f;
         //竖的格子数
         private int hGrid = 25;
         //横的格子数
@@ -31,8 +31,8 @@ namespace WindowsFormsApp1
 
         private Point point = new Point()
         {
-            X = 350,
-            Y = 225,
+            X = 450,
+            Y = 325,
         };
 
         private int cardio = 1000;
@@ -84,30 +84,53 @@ namespace WindowsFormsApp1
             {
                 list2.Add(new MyPoint(new PointF(left, top + count * i), new PointF(left + weight, top + count * i)));
             }
+
+            var listC = new List<PointF[]>();
+
+            
+
+            
             var listC1 = new PointF[cardio];
-            for (int i = 0; i < cardio; i++)
+            var listC2 = new PointF[cardio];
+            var listC3 = new PointF[cardio];
+            for (int j = 0; j < cardio; j++)
             {
-                listC1[i] = new PointF(i + left, i % 30 + top);
+                listC1[j] = new PointF(j + left, j % 20 + top);
+                listC2[j] = new PointF(j + left, j % 20 + top + 100);
+                listC3[j] = new PointF(j + left, j % 20 + top + 200);
             }
 
             var list3 = list1.Select(x =>
             {
-                return new MyPoint(new PointF((x.Left.X-left) * big - point.X*(big-1) + left, (x.Left.Y-top) * big - point.Y * (big - 1) + top), new PointF((x.Right.X-left) * big - point.X * (big - 1) + left, (x.Right.Y-top) * big - point.Y * (big - 1) + top));
+                //return new MyPoint(new PointF((x.Left.X - left) * big - point.X * (big - 1) + left, (x.Left.Y - top) * big - point.Y * (big - 1) + top), new PointF((x.Right.X - left) * big - point.X * (big - 1) + left, (x.Right.Y - top) * big - point.Y * (big - 1) + top));
+                return new MyPoint(new PointF((x.Left.X - point.X) * big + point.X, (x.Left.Y - point.Y) * big + point.Y), new PointF((x.Right.X - point.X) * big + point.X, (x.Right.Y - point.Y) * big + point.Y));
             });
             var list4 = list2.Select(x =>
             {
-                return new MyPoint(new PointF((x.Left.X - left) * big - point.X * (big - 1) + left, (x.Left.Y - top) * big - point.Y * (big - 1) + top), new PointF((x.Right.X - left) * big - point.X * (big - 1) + left, (x.Right.Y - top) * big - point.Y * (big - 1) + top));
+                //return new MyPoint(new PointF((x.Left.X - left) * big - point.X * (big - 1) + left, (x.Left.Y - top) * big - point.Y * (big - 1) + top), new PointF((x.Right.X - left) * big - point.X * (big - 1) + left, (x.Right.Y - top) * big - point.Y * (big - 1) + top));
+                return new MyPoint(new PointF((x.Left.X - point.X) * big + point.X, (x.Left.Y - point.Y) * big + point.Y), new PointF((x.Right.X - point.X) * big + point.X, (x.Right.Y - point.Y) * big + point.Y));
             });
 
-            var listC2 = listC1.Select(x =>
+
+            var listC11 = listC1.Select(x =>
             {
-                return new PointF((x.X - left) * big - point.X + left, (x.Y - top) * big - point.Y + top);
+                return new PointF((x.X - point.X) * big + point.X, (x.Y - point.Y) * big + point.Y);
+            }).ToArray();
+            var listC22 = listC2.Select(x =>
+            {
+                return new PointF((x.X - point.X) * big + point.X, (x.Y - point.Y) * big + point.Y);
+            }).ToArray();
+            var listC33 = listC3.Select(x =>
+            {
+                return new PointF((x.X - point.X) * big + point.X, (x.Y - point.Y) * big + point.Y);
             }).ToArray();
 
             var list5 = list3.Where(x => x.Left.X < weight + left && x.Left.X > left);
             var list6 = list4.Where(x => x.Left.Y < top + height && x.Left.Y > top);
 
-            var listC3 = listC2.Where(x => x.Y < top + height && x.Y > top);
+            var listC111 = listC11.Where(x => x.X < weight + left && x.X > left).ToArray();
+            var listC222 = listC22.Where(x => x.X < weight + left && x.X > left).ToArray();
+            var listC333 = listC33.Where(x => x.X < weight + left && x.X > left).ToArray();
 
             var list7 = list5.Select(x =>
             {
@@ -128,7 +151,13 @@ namespace WindowsFormsApp1
                 g.DrawLine(p2, item.Left, item.Right);
             }
 
-            g.DrawLines(p2, listC2);
+            for (int i = 0; i < 3; i++)
+            {
+                g.DrawLines(p2, listC111);
+                g.DrawLines(p2, listC222);
+                g.DrawLines(p2, listC333);
+            }
+            
 
         }
 
