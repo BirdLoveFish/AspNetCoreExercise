@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         //画布距离上边的长度
         private const int top = 200;
         //放大倍率
-        private const float big = 1.0f;
+        private const float big = 2f;
         //竖的格子数
         private const int hGrid = 20;
         //横的格子数
@@ -31,8 +31,8 @@ namespace WindowsFormsApp1
 
         private Point point = new Point()
         {
-            X = left + weight / 2,
-            Y = top + height / 2,
+            X = left + 250,
+            Y = top  + 100,
         };
 
         private const int cardio = 1000;
@@ -109,14 +109,14 @@ namespace WindowsFormsApp1
                 return new MyPoint(new PointF(left, x.Left.Y), new PointF(left + weight, x.Right.Y));
             });
 
-            foreach (var item in list7)
+            foreach (var item in list3)
             {
                 g.DrawLine(p2, item.Left, item.Right);
             }
-            //foreach (var item in list8)
-            //{
-            //    g.DrawLine(p2, item.Left, item.Right);
-            //}
+            foreach (var item in list4)
+            {
+                g.DrawLine(p2, item.Left, item.Right);
+            }
 
             /**********************画波形*****************************/
             var listC = new List<PointF[]>();
@@ -159,6 +159,37 @@ namespace WindowsFormsApp1
         {
             Graphics g = this.CreateGraphics();
             g.Clear(Color.White);
+
+            Pen p1 = new Pen(Color.Red, 2);
+            Pen p2 = new Pen(Color.Black, 1);
+            g.DrawRectangle(p1, new Rectangle(left, top, weight, height));
+
+            var listY = new List<float>(hGrid);
+            for(int i=0;i< hGrid; i++)
+            {
+                listY.Add(i * count + top);
+            }
+
+            List<float> listX = new List<float>(wGrid);
+            for (int i = 0; i < wGrid; i++)
+            {
+                listX.Add(i * count + left);
+            }
+
+            var listY2 = listY.Select(y => (y - point.Y) * big + point.Y)
+                .SkipWhile(a=> a < top).TakeWhile(b=> b < top + height);
+            var listX2 = listX.Select(x => (x - point.X) * big + point.X)
+                .SkipWhile(a => a < left).TakeWhile(b => b < left + weight);
+
+            foreach (var item in listY2)
+            {
+                g.DrawLine(p2, 0+left, item, weight + left, item);
+            }
+            foreach (var item in listX2)
+            {
+                g.DrawLine(p2, item, 0 + top, item, height + top);
+            }
+
         }
     }
 }

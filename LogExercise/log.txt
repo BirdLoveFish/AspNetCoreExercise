@@ -142,3 +142,17 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
 2020-01-01 16:16:59.425 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Hosting.Diagnostics||||Request finished in 270.996ms 500 text/html; charset=utf-8
 2020-01-01 16:16:59.673 +08:00 [INF] CusString|GET|Microsoft.AspNetCore.Hosting.Diagnostics||||Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
 2020-01-01 16:16:59.690 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Hosting.Diagnostics||||Request finished in 17.0888ms 404 
+2020-01-17 14:57:28.482 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|||||Starting web host
+2020-01-17 14:57:35.361 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|||||Starting Startup ConfigureServices
+2020-01-17 14:57:37.884 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|LogExercise.Startup||||Starting Startup Configure
+2020-01-17 14:57:40.990 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Now listening on: https://localhost:5001
+2020-01-17 14:57:41.062 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Now listening on: http://localhost:5000
+2020-01-17 14:57:41.065 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Application started. Press Ctrl+C to shut down.
+2020-01-17 14:57:41.066 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Hosting environment: Development
+2020-01-17 14:57:41.067 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.Hosting.Lifetime||||Content root path: D:\data\zhangb\AspNetCoreExercise\LogExercise
+2020-01-17 14:57:47.032 +08:00 [INF] CusString|GET|Microsoft.AspNetCore.Hosting.Diagnostics||||Request starting HTTP/2 GET https://localhost:5001/index.html  
+2020-01-17 14:57:47.323 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|Microsoft.AspNetCore.Hosting.Diagnostics||||Request finished in 295.7973ms 404 
+2020-01-17 14:59:28.272 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|||||Starting web host
+2020-01-17 14:59:29.042 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|||||Starting Startup ConfigureServices
+2020-01-17 15:00:01.733 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|||||Starting web host
+2020-01-17 15:00:02.915 +08:00 [INF] CusString|{ name = Enrich, line = 19 }|||||Starting Startup ConfigureServices
