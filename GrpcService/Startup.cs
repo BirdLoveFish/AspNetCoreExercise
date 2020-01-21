@@ -1,36 +1,20 @@
-using System;
+锘縰sing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ConfigurationExercise.ConfigurationModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace ConfigurationExercise
+namespace GrpcService
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
-
-        //IConfiguration只能在这里注入
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        //IConfiguration不能再方法里面注入
         public void ConfigureServices(IServiceCollection services)
         {
-            var result = Configuration["name"];
-
-            var person = new ConfigPerson();
-            Configuration.GetSection("person").Bind(person);
-            services.AddSingleton(person);
-            services.AddControllers();
+            services.AddGrpc();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -44,7 +28,12 @@ namespace ConfigurationExercise
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapGrpcService<GreeterService>();
+
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+                });
             });
         }
     }

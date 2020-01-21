@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using LogExercise.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NLog;
@@ -24,39 +26,56 @@ namespace LogExercise
         public static void Main(string[] args)
         {
             #region Serilog
-            //Log.Logger = new LoggerConfiguration()
-            //.MinimumLevel.Verbose()
-            //.MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-            //.Enrich.FromLogContext()
+            Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Verbose()
+            .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+            .Enrich.FromLogContext()
             //.Enrich.WithRequestInfo()
-            //.WriteTo.Console()
-            //.WriteTo.File(
-            //    "log.txt",
-            //    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {CusString}|{Method}|{SourceContext}|{MemberName}|{FilePath}|{LineNumber}|{Message:lj}{NewLine}{Exception}")
-            //.CreateLogger();
-
-            //LogContext.PushProperty("A", 1);
-
-            //try
-            //{
-            //    Log.Information("Starting web host");
-            //    CreateHostBuilder(args).Build().Run();
-            //    return;
-            //}
-            //catch (Exception ex)
-            //{
-            //    Log.Fatal(ex, "Host terminated unexpectedly");
-            //    return;
-            //}
-            //finally
-            //{
-            //    Log.CloseAndFlush();
-            //}
+            .Enrich.With(new ThreadIdEnricher())
+            .WriteTo.Console(
+                outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}]|{Message:lj} |{SourceContext} {NewLine}")
+            // {Method}:http请求的方法名
+            // {Information}
+            // {Exception}
+            .WriteTo.File(
+                "log.txt",
+                outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}]|{Message:lj} |{Information}| {NewLine}")
+            .CreateLogger();
+            
+            try
+            {
+                Log.Information("Starting web host");
+                CreateHostBuilder(args).Build().Run();
+                return;
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "Host terminated unexpectedly");
+                return;
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
             #endregion
 
             #region NLog
-            ConfigureNLog();
-            CreateHostBuilder(args).Build().Run();
+            // https://github.com/NLog/NLog/wiki/Getting-started-with-ASP.NET-Core-3
+            //var config = ConfigureNLog();
+
+            ////在startup前打印日志
+            ////var logger = NLogBuilder.ConfigureNLog(config).GetCurrentClassLogger();
+            ////logger.Info("Program Startup");
+
+            //var host = CreateHostBuilder(args).Build();
+
+            //using (var scope = host.Services.CreateScope())
+            //{
+            //    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+            //    logger.LogInformation("Program Startup");
+            //}
+
+            //host.Run();
             #endregion
 
         }
@@ -71,18 +90,19 @@ namespace LogExercise
                          * 放在上面和下面都一样，Startup中的Configure可以写日志
                          * ConfigureServices无法写日志
                          */
-                        //.UseSerilog()
+                        .UseSerilog()
                         .ConfigureLogging(config =>
                         {
                             config.ClearProviders();
                             config.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
                         })
-                        .UseNLog()
-                        .UseStartup<Startup>()
+                        //.UseNLog()
+                        .UseStartup<StartupSerilog>()
+                        //.UseStartup<StartupNLog>()
                         ;
                 });
 
-        private static void ConfigureNLog()
+        private static LoggingConfiguration ConfigureNLog()
         {
             var config = new LoggingConfiguration();
 
@@ -94,18 +114,17 @@ namespace LogExercise
 
             var fileTarget = new FileTarget
             {
-                FileName = "file.log",
-                Layout = @"${date:format=HH\:mm\:ss} ${level} ${message}",
+                FileName = @"logs/${shortdate}/file.log",
+                Layout = @"${date:format=HH\:mm\:ss} ${level} ${message} ${callsite}",
             };
             config.AddTarget("file", fileTarget);
 
             config.AddRule(LogLevel.Trace, LogLevel.Fatal, "console");
             config.AddRule(LogLevel.Trace, LogLevel.Fatal, "file");
             LogManager.Configuration = config;
+            return config;
         }
 
 
     }
-
-    
 }

@@ -2,34 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ConfigurationExercise.ConfigurationModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace ConfigurationExercise
+namespace RabbitWeb
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
-
-        //IConfiguration只能在这里注入
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        //IConfiguration不能再方法里面注入
+        public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
-            var result = Configuration["name"];
-
-            var person = new ConfigPerson();
-            Configuration.GetSection("person").Bind(person);
-            services.AddSingleton(person);
             services.AddControllers();
         }
 
@@ -42,9 +35,11 @@ namespace ConfigurationExercise
 
             app.UseRouting();
 
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
             });
         }
     }

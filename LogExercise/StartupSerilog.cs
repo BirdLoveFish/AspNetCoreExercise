@@ -13,12 +13,12 @@ using Serilog;
 
 namespace LogExercise
 {
-    public class Startup
+    public class StartupSerilog
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _configuration;
 
-        public Startup(
+        public StartupSerilog(
             IWebHostEnvironment env,
             IConfiguration configuration)
         {
@@ -35,7 +35,7 @@ namespace LogExercise
         }
 
         public void Configure(IApplicationBuilder app,
-            ILogger<Startup> logger)
+            ILogger<StartupSerilog> logger)
         {
             //这里可以使用注入的方法
             logger.LogInformation("Starting Startup Configure");

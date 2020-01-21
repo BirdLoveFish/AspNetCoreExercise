@@ -12,4 +12,6 @@
     <Content Include="iniData.ini" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties jsondata_1json__JsonSchema="http://json.schemastore.org/appsettings" /></VisualStudio></ProjectExtensions>
+
 </Project>

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace ConfigurationExercise
+namespace FilterExercise
 {
     public class Program
     {
@@ -18,16 +18,6 @@ namespace ConfigurationExercise
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureAppConfiguration((hostingContext, config) =>
-                {
-                    config.AddJsonFile(
-                        "jsonData.json", optional: false, reloadOnChange: true);
-                    config.AddIniFile(
-                        "iniData.ini", optional: false, reloadOnChange: false);
-                    config.AddXmlFile(
-                        "xmlData.xml", optional: false, reloadOnChange: false);
-                    config.AddInMemoryCollection(MemoryData._dict);
-                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
