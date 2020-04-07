@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SignalRExercise.Hubs
 {
-    public class HubChat: Hub
+    public class HubChat : Hub
     {
         public async Task SendMessage(string user, string message)
         {

@@ -610,3 +610,39 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
 2020-01-21 14:43:29.882 +08:00 [INF]|Content root path: D:\data\zhangb\AspNetCoreExercise\LogExercise || 
 2020-01-21 14:43:32.250 +08:00 [INF]|Request starting HTTP/1.1 GET http://localhost:5000/index.html   || 
 2020-01-21 14:43:32.494 +08:00 [INF]|Request finished in 254.6245ms 404  || 
+2020-03-30 13:11:31.366 +08:00 [INF]|Starting web host || 
+2020-03-30 13:11:32.546 +08:00 [INF]|Starting Startup ConfigureServices || 
+2020-03-30 13:11:32.899 +08:00 [INF]|Starting Startup Configure || 
+2020-03-30 13:11:33.246 +08:00 [INF]|Now listening on: http://localhost:5000 || 
+2020-03-30 13:11:33.263 +08:00 [INF]|Application started. Press Ctrl+C to shut down. || 
+2020-03-30 13:11:33.265 +08:00 [INF]|Hosting environment: Development || 
+2020-03-30 13:11:33.266 +08:00 [INF]|Content root path: D:\data\zhangb\AspNetCoreExercise\LogExercise || 
+2020-03-30 13:11:35.028 +08:00 [INF]|Request starting HTTP/1.1 GET http://localhost:5000/index.html   || 
+2020-03-30 13:11:35.379 +08:00 [INF]|Request finished in 325.1668ms 404  || 
+2020-03-30 13:19:25.334 +08:00 [INF]|Starting web host || 
+2020-03-30 13:19:27.465 +08:00 [INF]|Starting Startup ConfigureServices || 
+2020-03-30 13:19:27.985 +08:00 [INF]|Starting Startup Configure || 
+2020-03-30 13:19:29.199 +08:00 [INF]|Now listening on: http://localhost:5000 || 
+2020-03-30 13:19:29.253 +08:00 [INF]|Application started. Press Ctrl+C to shut down. || 
+2020-03-30 13:19:29.256 +08:00 [INF]|Hosting environment: Development || 
+2020-03-30 13:19:29.262 +08:00 [INF]|Content root path: D:\data\zhangb\AspNetCoreExercise\LogExercise || 
+2020-03-30 13:19:31.270 +08:00 [INF]|Request starting HTTP/1.1 GET http://localhost:5000/index.html   || 
+2020-03-30 13:19:31.579 +08:00 [INF]|Request finished in 315.3505ms 404  || 
+2020-03-30 13:19:40.948 +08:00 [INF]|Request starting HTTP/1.1 GET http://localhost:5000/index.html   || 
+2020-03-30 13:19:40.951 +08:00 [INF]|Request finished in 3.5227ms 404  || 
+2020-03-30 13:19:44.601 +08:00 [INF]|Request starting HTTP/1.1 GET http://localhost:5000/home   || 
+2020-03-30 13:19:44.612 +08:00 [INF]|Executing endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)' || 
+2020-03-30 13:19:44.707 +08:00 [INF]|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller LogExercise.Controllers.HomeController (LogExercise). || 
+2020-03-30 13:19:44.712 +08:00 [INF]|0,1 || 
+2020-03-30 13:19:44.716 +08:00 [INF]|1,1 || 
+2020-03-30 13:19:44.720 +08:00 [INF]|1,1 || 
+2020-03-30 13:19:44.721 +08:00 [INF]|0,1 || 
+2020-03-30 13:19:44.723 +08:00 [INF]|1,1 || 
+2020-03-30 13:19:44.726 +08:00 [INF]|1,1 || 
+2020-03-30 13:19:44.729 +08:00 [INF]|0,1 || 
+2020-03-30 13:19:44.739 +08:00 [INF]|Executing ObjectResult, writing value of type 'System.String'. || 
+2020-03-30 13:19:44.756 +08:00 [INF]|Executed action LogExercise.Controllers.HomeController.Index (LogExercise) in 39.2118ms || 
+2020-03-30 13:19:44.759 +08:00 [INF]|Executed endpoint 'LogExercise.Controllers.HomeController.Index (LogExercise)' || 
+2020-03-30 13:19:44.764 +08:00 [INF]|Request finished in 163.5402ms 200 text/plain; charset=utf-8 || 
+2020-03-30 13:19:44.968 +08:00 [INF]|Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico   || 
+2020-03-30 13:19:44.971 +08:00 [INF]|Request finished in 3.721ms 404  || 
