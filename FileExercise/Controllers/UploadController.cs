@@ -32,8 +32,14 @@ namespace FileExercise.Controllers
         /// </summary>
         /// <param name="file"></param>
         /// <returns></returns>
+        [HttpPost]
         public IActionResult SingleFile(IFormFile file)
         {
+            if(file == null)
+            {
+                return Ok("file = null");
+            }
+
             var pathname = Path.Combine(_dir, file.FileName);
 
             using (var fileStream =
@@ -41,7 +47,8 @@ namespace FileExercise.Controllers
             {
                 file.CopyTo(fileStream);
             }
-            return RedirectToAction(nameof(Index));
+            //return RedirectToAction(nameof(Index));
+            return Ok();
         }
 
         /// <summary>
@@ -49,6 +56,7 @@ namespace FileExercise.Controllers
         /// </summary>
         /// <param name="files"></param>
         /// <returns></returns>
+        [HttpPost]
         public IActionResult MultipleFiles(IEnumerable<IFormFile> files)
         {
             foreach (var file in files)
@@ -59,23 +67,26 @@ namespace FileExercise.Controllers
                     new FileStream(pathname, FileMode.Create, FileAccess.Write);
                 file.CopyTo(fileStream);
             }
-            return RedirectToAction(nameof(Index));
+            //return RedirectToAction(nameof(Index));
+            return Ok();
         }
 
         /// <summary>
         /// 用自定义Model 上传文件
         /// </summary>
         /// <returns></returns>
+        [HttpPost]
         public IActionResult FileInModel(CustomFileViewModel vm)
         {
-            var pathname = Path.Combine(_dir, vm.Name);
+            var pathname = Path.Combine(_dir, vm.Other);
 
             using (var fileStream =
                 new FileStream(pathname, FileMode.Create, FileAccess.Write))
             {
                 vm.File.CopyTo(fileStream);
             }
-            return RedirectToAction(nameof(Index));
+            //return RedirectToAction(nameof(Index));
+            return Ok();
         }
 
 

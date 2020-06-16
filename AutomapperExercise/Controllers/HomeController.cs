@@ -95,5 +95,30 @@ namespace AutomapperExercise.Controllers
 
             return Ok(person2ViewModel);
         }
+
+        public IActionResult Map4()
+        {
+            var one = new DifferentOne
+            {
+                One = "one one",
+                Two = "one two",
+                Three = "one three"
+            };
+
+            var two = new DifferentTwo
+            {
+                Two = "two two",
+                Three = "two three",
+                Four = "two four"
+            };
+
+            //不存在的会设置为原来的值
+            //_mapper.Map(one, two);
+
+            //不存在会赋值为null
+            two = _mapper.Map<DifferentTwo>(one);
+
+            return Ok(two);
+        }
     }
 }

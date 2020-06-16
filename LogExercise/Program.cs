@@ -119,8 +119,8 @@ namespace LogExercise
             };
             config.AddTarget("file", fileTarget);
 
-            config.AddRule(LogLevel.Trace, LogLevel.Fatal, "console");
-            config.AddRule(LogLevel.Trace, LogLevel.Fatal, "file");
+            config.AddRule(LogLevel.Info, LogLevel.Fatal, "console");
+            config.AddRule(LogLevel.Info, LogLevel.Fatal, "file");
             LogManager.Configuration = config;
             return config;
         }

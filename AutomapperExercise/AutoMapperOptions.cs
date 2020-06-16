@@ -38,6 +38,14 @@ namespace AutomapperExercise
                 .ForMember(dest => dest.Name1, config => config.MapFrom(source => source.Name))
                 //在映射后修改，修改的是目标
                 .AfterMap((source, dest) => dest.Name1 = dest.Name1.TrimStart('_'));
+
+            //测试两个类不对应时的状况
+
+
+            //有不同属性
+            CreateMap<DifferentOne, DifferentTwo>();
+            //有不同属性
+            CreateMap<DifferentTwo, DifferentOne>();
         }
     }
 }

@@ -12,7 +12,9 @@ namespace AutomapperExercise.Controllers
     {
         public TestProfile()
         {
+            //有相同的字段
             CreateMap<A, B>();
+            //有相同的字段
             CreateMap<B, A>();
         }
     }
@@ -98,5 +100,18 @@ namespace AutomapperExercise.Controllers
         public string A7 { get; set; }
     }
 
+    public class C
+    {
+        public string One { get; set; }
+        public string Two { get; set; }
+        public string Three { get; set; }
+    }
+
+    public class D
+    {
+        public string Two { get; set; }
+        public string Three { get; set; }
+        public string Four { get; set; }
+    }
 
 }

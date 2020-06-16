@@ -1,15 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Net.Http.Headers;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FileExercise.Controllers
 {
@@ -44,7 +36,7 @@ namespace FileExercise.Controllers
         public IActionResult DisplayImage(string filename)
         {
             var pathname = Path.Combine(_dir, filename);
-            var result64 = System.IO.File.ReadAllBytes(pathname);
+            var result64 = System.IO.File.OpenRead(pathname);
 
             //可以返回Base64的字符串
             //var result = Convert.ToBase64String(result64);
@@ -54,7 +46,8 @@ namespace FileExercise.Controllers
             //return File(result64, "image/png");
 
             //直接返回图片文件
-            return PhysicalFile(pathname, "image/png");
+            //return PhysicalFile(pathname, "text/plain");
+            return File(result64, "text/plain", "a.txt");
         }
 
         /// <summary>
