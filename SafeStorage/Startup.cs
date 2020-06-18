@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Cancellation.Filter;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Cancellation
+namespace SafeStorage
 {
     public class Startup
     {
@@ -24,10 +23,7 @@ namespace Cancellation
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers(config=>
-            {
-                config.Filters.Add<OperationCancelledExceptionFilter>();
-            });
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -43,7 +39,7 @@ namespace Cancellation
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
