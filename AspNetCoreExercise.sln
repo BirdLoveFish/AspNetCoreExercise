@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafeStorage", "SafeStorage\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Environment", "Environment\Environment.csproj", "{B4CF6DD7-F4D9-43C0-8BE1-BAF50F64EDC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundExercise", "BackgroundExercise\BackgroundExercise.csproj", "{B2C27061-DE59-4613-A69D-E7C9E1F4138C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -175,6 +177,10 @@ Global
 		{B4CF6DD7-F4D9-43C0-8BE1-BAF50F64EDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4CF6DD7-F4D9-43C0-8BE1-BAF50F64EDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4CF6DD7-F4D9-43C0-8BE1-BAF50F64EDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C27061-DE59-4613-A69D-E7C9E1F4138C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C27061-DE59-4613-A69D-E7C9E1F4138C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C27061-DE59-4613-A69D-E7C9E1F4138C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C27061-DE59-4613-A69D-E7C9E1F4138C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
