@@ -2,12 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FileExercise.Controllers
 {
@@ -47,8 +43,7 @@ namespace FileExercise.Controllers
             {
                 file.CopyTo(fileStream);
             }
-            //return RedirectToAction(nameof(Index));
-            return Ok();
+            return RedirectToAction(nameof(Index));
         }
 
         /// <summary>
@@ -67,8 +62,7 @@ namespace FileExercise.Controllers
                     new FileStream(pathname, FileMode.Create, FileAccess.Write);
                 file.CopyTo(fileStream);
             }
-            //return RedirectToAction(nameof(Index));
-            return Ok();
+            return RedirectToAction(nameof(Index));
         }
 
         /// <summary>

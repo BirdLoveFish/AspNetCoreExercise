@@ -23,6 +23,8 @@ namespace HttpClientExercise.Controller
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
+
+
             var response = await client.GetAsync("http://feiniaomuyu.top/value");
             response.EnsureSuccessStatusCode();
             return Ok(await response.Content.ReadAsStringAsync());

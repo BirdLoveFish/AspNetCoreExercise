@@ -1,8 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -37,22 +34,21 @@ namespace BackgroundExercise.Background5
                 var count = _messageStringQueue.Count();
 
                 //进行筛选
-
                 if (count > 0)
                 {
-                    //强制执行
+                    // 每当执行10次 强制执行
                     time++;
                     if (time < 10)
                     {
                         continue;
                     }
                     time = 0;
+                    //continue;
                 }
 
                 await Task.Delay(300);
 
                 _logger.LogInformation($"message = {message}, count = {count}");
-                
             }
         }
 

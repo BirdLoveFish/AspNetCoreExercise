@@ -1,7 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -15,7 +13,7 @@ namespace BackgroundExercise.Background5
 
         public int Count()
         {
-            return _queue.Count;
+            return _queue.Count();
         }
 
         public async Task<string> Dequeue(CancellationToken cancellationToken)
@@ -31,7 +29,7 @@ namespace BackgroundExercise.Background5
         {
             if (messgae == null)
             {
-                throw new ArgumentException();
+                throw new ArgumentNullException();
             }
 
             _queue.Enqueue(messgae);
